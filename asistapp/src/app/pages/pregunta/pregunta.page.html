@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row class="FondoLogoV2">
+      <ion-col>
+        <ion-img src="/assets/images/LogoV2.jpg" class="LogoTop"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="Fondo">
+    <ion-grid>
+      <ion-row>
+
+        <ion-col>
+          <div class="ion-padding">
+            <h1 class="Titulo">Sistema de Asistencia DUOC</h1>
+          </div>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row>
+
+        <ion-col >
+
+
+          <ion-card class="ion-padding CartaFondoblk">
+
+            <ion-card-header class="TitutloCarta1">Recuperar contraseña</ion-card-header>
+            <ion-grid>
+    
+              <ion-row class="CardText">
+
+                <ion-col>
+                  <p>Bienvenido</p>
+                  <div>{{ nombre }}</div>
+                </ion-col>
+
+              </ion-row>
+              <ion-row>
+          
+                <ion-col>
+                  <p class="center">Paso 2: Responde la pregunta secreta</p>
+                </ion-col>
+
+              </ion-row>
+              <ion-row class="CardText">
+
+
+                <ion-col class="center">
+                  <div >{{ preguntaSecreta }}</div>
+                </ion-col>
+                
+              </ion-row>
+    
+              <ion-row >
+
+                <ion-col class="center">
+                  <ion-input  type="text" [(ngModel)]="respuesta" name="respuesta" placeholder="Respuesta Secreta"></ion-input>
+                </ion-col>
+
+
+              </ion-row>
+
+              <ion-row >
+
+                <ion-col class="center">
+                  <button class="Btn-Recuperar" (click)="recuperarRespuesta()">Recuperar Contraseña</button>
+                </ion-col>
+
+                
+              </ion-row>
+
+
+               
+
+            
+    
+            </ion-grid>
+            
+            
+            
+            
+    
+            
+          </ion-card>
+
+
+        </ion-col>
+
+       
+
+
+
+      </ion-row>
+
+     
+  
+      <ion-row class="ion-padding">
+      
+        <ion-col class="center">
+          <button  class="btn-v-inicio" (click)="inicio()">Volver a Inicio</button>
+        </ion-col>
+        
+      </ion-row>
+
+    </ion-grid>
+
+   
+  </div>
+
+ 
+</ion-content>
+<app-footer></app-footer>
+

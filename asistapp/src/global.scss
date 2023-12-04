@@ -1,0 +1,118 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+
+
+
+.LogoTop{
+    width: 100%;
+    height: 45px;
+    background-color:  black;
+    
+  }
+  
+.Titulo{
+  
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color:  rgba(255, 184, 0, 1);
+    border-radius: 12px;
+    font-size: medium;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+ 
+
+
+#Fondo{
+
+
+    background-image: url('assets/images/SedeTFondo.jpg'); /* Path to your image */
+    background-size: cover; /* Adjust this as needed */
+    background-repeat: no-repeat;
+    height: 100%; /* Set the height to 100% to cover the entire content area */
+    width: 100%;
+    opacity: 1;
+    
+  }
+  
+  
+.FondoLogoV2{
+    color: black;
+    background-color: black;
+  }
+
+  .LogoTop{
+    width: 100%;
+    height: 45px;
+  }
+
+  .CartaFondoblk{
+    background-color: black;
+    color: white;
+    font-size: large;
+  }
+  .CartaTitulo{
+    color: white;
+    font-size: larger;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 3px solid rgba(255, 184, 0, 1);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .InputGlobalpos{
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-v-inicio{
+  background-color: purple;
+  text-align: center;
+  justify-content: center;
+  font-size: larger;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 40px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  margin-top: 50px;
+}
+.center{
+  text-align: center;
+  justify-content: center;
+}
+  

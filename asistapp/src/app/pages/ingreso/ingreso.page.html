@@ -1,0 +1,82 @@
+
+
+
+<app-header-anon></app-header-anon>
+<ion-content>
+  <div id="Fondo">
+    <ion-grid>
+      <ion-col>
+        <div class="ion-padding">   
+          <h1 class="Titulo">Sistema de Asistencia </h1>
+        </div>
+      </ion-col>
+    </ion-grid>
+  
+  
+    <ion-grid >
+      <ion-row>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+
+          <ion-card class="CartaFondoblk">
+          
+            <ion-card-header class="CartaTitulo ion-padding">Bienvenidos</ion-card-header>
+  
+            <form action="">
+              <ion-card> 
+              <div class="InputGlobalpos">
+                <ion-item>
+                  <ion-input class="InputGlobalpos" placeholder="Ingresa tu Correo" type="text" [(ngModel)]="correo"name="correo"></ion-input>
+                  <ion-icon name="person-outline"></ion-icon>
+                </ion-item>
+              </div>
+              </ion-card>
+              <ion-card>
+                <div class="InputGlobalpos">
+                  <ion-item>
+                    <ion-input class="InputGlobalpos" type="password" placeholder="Ingresa tu contraseña" [(ngModel)]="password" name="password"></ion-input>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                  </ion-item>
+                </div>
+              </ion-card>
+              <ion-grid>
+                
+                <ion-row>
+                  <ion-col></ion-col>
+                  <ion-col class="Ingresarbtn">
+                    <ion-button class="btn-login-ing" (click)="ingresar()">Ingresar</ion-button>
+                  </ion-col>
+                  <ion-col></ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col></ion-col>
+                  <ion-col class="Ingresarbtn">
+                    <ion-button class="btn-login-ing" (click)="Registro()">Registrarme</ion-button>
+                  </ion-col>
+                  <ion-col></ion-col>
+                </ion-row>
+
+              </ion-grid>
+            </form>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+       
+          <ion-col class="OlvidarSeccion">
+            <p> Olvidaste tu contraseña ? <a [routerLink]="['/correo']">Recuperar</a></p>
+          </ion-col>
+        </ion-row>
+    
+    </ion-grid>
+  </div>
+  
+  
+</ion-content>
+<app-footer></app-footer>

@@ -1,0 +1,43 @@
+
+<app-header-anon></app-header-anon>
+<ion-content [fullscreen]="true">
+  <div id="Fondo">
+
+    <ion-grid>
+      <ion-row>
+
+        <ion-col>
+          <div class="ion-padding">
+            <h1 class="Titulo">Sistema de Asistencia DUOC</h1>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-padding">
+
+          <ion-card class="center">
+
+            <ion-card-header>Datos ingresados correctos</ion-card-header>
+
+            <ion-row class="center ion-padding">
+              <ion-button  (click)="showPassword()">
+                Show Password {{ this.password }}
+              </ion-button>
+
+            </ion-row>
+            
+            Show Password {{ this.password }}
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row class="center ion-padding">
+        <button class="btn-v-inicio" (click)="inicio()">Volver a inicio</button>
+        
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<app-footer></app-footer>
+

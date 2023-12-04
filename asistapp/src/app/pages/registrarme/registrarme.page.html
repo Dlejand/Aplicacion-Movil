@@ -1,0 +1,79 @@
+
+<app-header-anon></app-header-anon>
+<ion-content [fullscreen]="true">
+  <div id="Fondo">
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-padding">
+            <h1 class="Titulo">Sistema de Asistencia DUOC</h1>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card class="CartaFondoblk">
+            <ion-card-header class="Subtitulo1">Registro</ion-card-header>
+            <div class="Subtitulo1 ion-padding">Ingrese sus datos :</div>
+
+            
+              <ion-list>
+                <ion-item>
+                  <ion-label position="floating">Ingrese su correo</ion-label>
+                  <ion-input [(ngModel)]="UsuNuevo.correo" type="email" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">Ingrese su correo</ion-label>
+                  <ion-input [(ngModel)]="UsuNuevo.correo" type="email" required></ion-input>
+                </ion-item>
+          
+                <ion-item>
+                  <ion-label position="floating">Ingrese su nombre</ion-label>
+                  <ion-input [(ngModel)]="UsuNuevo.nombre" type="text" required></ion-input>
+                </ion-item>
+          
+                <ion-item>
+                  <ion-label position="floating">Ingrese su apellido</ion-label>
+                  <ion-input [(ngModel)]="UsuNuevo.apellido" type="text" required></ion-input>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-label position="floating">Contraseña</ion-label>
+                  <ion-input [(ngModel)]="UsuNuevo.password" type="password" required></ion-input>
+                </ion-item>
+            
+            
+            
+                <ion-button expand="full" (click)="Registro()" [disabled]="!isValidForm()">Signup</ion-button>
+              </ion-list>
+
+            </ion-card>
+
+
+
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    
+      
+    
+
+
+  </div>
+  
+
+  
+  
+  
+  
+  
+
+</ion-content>
+<app-footer></app-footer>
+

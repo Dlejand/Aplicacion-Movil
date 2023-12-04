@@ -1,0 +1,71 @@
+
+<app-header-anon></app-header-anon>
+
+<ion-content >
+
+
+
+  <div id="Fondo">
+
+    <ion-grid>
+      <ion-col>
+        <div class="ion-padding">
+          <h1 class="Titulo">Sistema de Asistencia DUOC</h1>
+        </div>
+      </ion-col>
+    </ion-grid>
+
+    <ion-grid >
+      <ion-row>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card class="CartaFondoblk">
+            <ion-card-header class="CardTitle1 ion-padding">Recuperar Contraseña</ion-card-header>
+
+            <h1 class="sub">Ingrese sus datos</h1> 
+
+
+
+            <form action="">
+              <p class=" center">Paso 1: Verifique su correo</p>
+              
+              <ion-card> 
+                <ion-input class="InputLogin ion-padding" placeholder="Ingresa tu correo" type="text"  [(ngModel)]="correo" name="correo" #correoInput></ion-input>
+              </ion-card>
+
+              <ion-row>
+                <ion-col class="center ion-padding">
+                  <button class="Btn-Recuperar" (click)="recuperar()">Recuperar</button>
+                </ion-col>
+              </ion-row>
+
+            </form>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-padding centerbtn">
+      
+        <ion-col>
+          <button  class="btn-v-inicio" (click)="inicio()">Volver a Inicio</button>
+        </ion-col>
+        
+      </ion-row>
+
+    </ion-grid>
+  </div>
+
+  
+  
+  
+  
+
+</ion-content>
+<app-footer></app-footer>
+
+
+

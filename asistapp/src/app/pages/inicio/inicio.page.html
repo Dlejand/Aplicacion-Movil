@@ -1,0 +1,140 @@
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Navegar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid>
+      <ion-row class="opt_S_menu">
+        <ion-menu-toggle> <!-- Wrap menu item with ion-menu-toggle -->
+          <div class="btn_Hamgurmenu ion-padding icobox " (click)="cambiarComponente('qr')">
+            <div>Lector Codigo QR</div>
+          </div>
+        </ion-menu-toggle>
+      </ion-row>
+
+      <ion-row class="opt_S_menu">
+        <ion-menu-toggle> <!-- Wrap menu item with ion-menu-toggle -->
+          <div class="btn_Hamgurmenu ion-padding" (click)="cambiarComponente('misdatos')">
+            <div>Mis datos</div>
+          </div>
+        </ion-menu-toggle>
+      </ion-row>
+
+      <ion-row class="opt_S_menu">
+        <ion-menu-toggle> <!-- Wrap menu item with ion-menu-toggle -->
+          <div class="btn_Hamgurmenu ion-padding" (click)="cambiarComponente('miclase')">
+            <div>Mis Clases</div>
+          </div>
+        </ion-menu-toggle>
+      </ion-row>
+
+      <ion-row class="opt_S_menu">
+        <ion-menu-toggle> <!-- Wrap menu item with ion-menu-toggle -->
+          <div class="btn_Hamgurmenu ion-padding" (click)="cambiarComponente('foro')">
+            <div>Foro</div>
+          </div>
+        </ion-menu-toggle>
+      </ion-row>
+
+      <ion-row>
+        <ion-menu-toggle> <!-- Wrap menu item with ion-menu-toggle -->
+          <div class="btn_HamgurmenuBottom ion-padding">
+            <div (click)="cerrarSesion()" class="opt_S_menu_CS">
+              Cerrar Sesion
+            </div>
+          </div>
+        </ion-menu-toggle>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-menu>
+
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-row class="FondoLogoV2" >
+
+        <ion-col>
+
+          <ion-img
+            src="/assets/images/LogoV2.jpg" 
+            class="LogoTop"
+          ></ion-img>
+
+        </ion-col>
+
+      </ion-row>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+
+    <ion-content > 
+      <div id="Fondo" >
+
+
+
+           
+        <ion-toolbar>
+          <ion-segment [(ngModel)]="componente_actual" (ngModelChange)="cambiarComponente($event)">
+            
+            <ion-segment-button  value="qr" class="ToolBarblk" *ngIf="!isAdmin" >
+              <ion-label>QR</ion-label>
+            </ion-segment-button>
+        
+            <ion-segment-button value="miclase" class="ToolBarblk" *ngIf="!isAdmin" >
+              <ion-label>Mi clase</ion-label>
+            </ion-segment-button>
+            
+            <ion-segment-button value="admin" class="ToolBarblk" *ngIf="isAdmin" >
+              <ion-label>Admin</ion-label>
+            </ion-segment-button>
+        
+            <ion-segment-button value="foro" class="ToolBarblk">
+              <ion-label>Foro</ion-label>
+            </ion-segment-button>
+        
+            <ion-segment-button value="misdatos" class="ToolBarblk">
+              <ion-label>Mis datos</ion-label>
+            </ion-segment-button>
+        
+          </ion-segment>
+        </ion-toolbar>
+    
+      <app-qr [hidden]="componente_actual !== 'qr'" (qrCapturado)="cambiarComponente('miclase')"></app-qr>
+    
+      <app-miclase [hidden]="componente_actual !== 'miclase'"></app-miclase>
+    
+      <app-foro [hidden]="componente_actual !== 'foro'"></app-foro>
+    
+      <app-misdatos [hidden]="componente_actual !== 'misdatos'"></app-misdatos>
+
+      <app-admin [hidden]="componente_actual !== 'admin'" *ngIf="isAdmin" ></app-admin>
+    
+    
+    
+    
+
+
+
+      </div>
+    
+
+   
+ 
+ 
+ 
+      
+   </ion-content>
+   <app-footer></app-footer>
+
+
+
+</div>
+

@@ -1,0 +1,50 @@
+<ion-content >
+  <div id="Fondo">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+
+          <ion-card class="CartaFondoblk">
+            <ion-card-header class="CartaTitulo ion-padding">
+              ¡Bienvenido(a) <br> {{ usuario.nombre }} {{ usuario.apellido }}!
+            </ion-card-header>
+            
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        
+
+        <button class="btn-CamaraAcc" *ngIf="!escaneando" (click)="comenzarEscaneoQR()">
+          Comenzar Escaneo de QR
+        </button>
+
+      
+      </ion-row>
+
+      <ion-row>
+
+        <button class="btn-CamaraAcc" *ngIf="escaneando && plataforma === 'web'" (click)="detenerEscaneoQR()">
+          Detener escaneo de QR
+        </button>
+
+      </ion-row>
+
+    </ion-grid>
+
+
+ 
+  <ion-card>
+    <video #video [hidden]="!escaneando" width="100%"></video>
+    <canvas #canvas hidden></canvas>
+  </ion-card>
+  
+
+
+  </div>
+
+
+</ion-content>
